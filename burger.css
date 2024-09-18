@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #F6F0EB;
+}
+
+header {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-list {
+    margin-right: 20px;
+}
+
+.nav-list ul {
+    display: flex;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+
+}
+
+.nav-list li {
+    list-style: none;
+    margin: 0 5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: background-color 0.4s linear;
+    padding: 10px 15px;
+
+}
+
+.nav-list li:hover {
+    background-color: #F6F0EB;
+    border-radius: 25px;
+}
+
+.burgur-logo {
+    width: 50px;
+    margin-left: 20px;
+}
+
+.burgur-logo img {
+    width: 100%;
+}
+
+.hero-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.hero-img p {
+    color: #492118;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.burger-img {
+    width: 100%;
+    max-width: 1200px;
+    padding-inline: 32px;
+}
+
+.hero-img img {
+    width: 100%;
+}
+
+main h1 {
+    text-align: center;
+    color: #492118;
+}
+
+.burger-pick {
+    margin-block: 50px;
+    padding: 0 20px;
+}
+
+.burger-pick-img {
+    display: flex;
+    justify-content: center;
+    margin-block: 30px;
+}
+
+.burger-pick-img img {
+    max-width: 90%;
+    height: auto;
+}
+
+.go-top {
+    text-align: center;
+}
+
+.go-top a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #492118;
+    text-decoration-line: underline;
+}
+
+.foot-text {
+    text-align: center;
+    color: #492118;
+    line-height: 3;
+}
+.cross-icon{
+    display: none;
+
+}
+.side-name{
+    display: none;
+    color: #492118;
+    font-size: 1.4em;
+    font-weight: 700;
+    /* max-width: 270px; */
+    /* width: 80%; */
+    position: relative;
+
+}
+.side-name::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #F6F0EB;
+    /* animation: moving-text ; */
+    animation: moving-text 2s ease infinite forwards;
+    z-index: 9;
+}
+.menu-icon{
+    background-color: #FFFFFF;
+    display: none;
+    text-align: center;
+    width: 56px;
+    height: 56px;
+    padding-top: 6px;
+    border-bottom-left-radius: 100%;
+}
+/* Media Queries for Responsiveness */
+@media (max-width:1150px) {
+    .nav-list li {
+        padding: 10px;
+        margin: 0 ;
+    }
+    .burgur-logo {
+        width: 35px;
+        margin-left: 0;
+        margin-right: 30px;
+    }
+    .nav-list a{
+        font-size: 0.7em;
+    }
+    .nav-list {
+        margin-right: 5px;
+    }
+    nav{
+        width: 95%;
+    }
+    main h1{
+        font-size: 1.4em;
+    }
+    .go-top {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 680px) {
+    .nav-list{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #ffffffd0;
+        padding: 20px;
+        display: none;
+z-index: 10;
+        
+    }
+    .nav-list ul {
+        flex-direction: column;
+    }
+    header {
+        background-color: #f6f0eb;
+        position: sticky;
+        top: 0;
+    }
+   
+    .nav-list a{
+        color: #492118;
+    }
+    .cross-icon{
+        display: block;
+        color: #492118;
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        
+    }
+    .hero-img p {
+        font-size: 14px;
+    }
+    .foot-text{
+        font-size: 14px;
+    }
+    main h1{
+        font-size: 1.2em;
+    }
+    .go-top {
+        font-size: 1.2em;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .show .nav-list{
+        display: block;
+
+    }
+    .show .menu-icon {
+        visibility: hidden;
+    }
+    .not-show  .nav-list{
+        display: none;
+
+    }
+   .not-show .menu-icon {
+    display: block;
+   }
+   .side-name{
+    display: inline-block;
+   }
+  
+}
+@media (max-width: 430px) {
+    .side-name{
+        font-size: 1em;
+    }
+}
+@keyframes moving-text {
+     100%{
+        width: 0;
+     }
+}
